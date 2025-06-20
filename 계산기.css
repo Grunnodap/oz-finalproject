@@ -1,0 +1,118 @@
+/* 모든 요소의 기본 여백 제거 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html과 body의 기본 설정 */
+
+html, body{
+    height: 100%;
+}
+
+/* 계산기 몸체 */
+
+.container{
+    width: 350px;
+    height: 500px;
+    border: 3px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 12px;
+    gap: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #fff
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* 시스템 */
+
+.system{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.system-buttons{
+    display: flex;
+    gap: 5px;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* 시스템 버튼 */
+
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+
+/* display */
+
+.display{
+    flex-grow: 1;
+    display: flex;
+    width: 310px;
+    height: 90px;
+    border: 2px solid gray;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px;
+    font-size: 2rem;
+    background-color: #eee;
+    border-radius: 6px;
+}
+
+/* buttons */
+
+.buttons{
+    width: 310px;
+    height: 350px;
+}
+
+.button{
+    width: calc(25% - 4px); /* 모든 버튼의 크기를 계산 값으로 할당 */
+    height: 70px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: #eee;
+}
+
+.zero {
+    width: calc(50% - 4px);
+} /* 17번째 자식 태그(버튼 0)의 폭 크기를 계산 값으로 할당
+굳이 이렇게 하지 않아도 zero클래스가 부여되어있으니 그 클래스를 선택해서
+적용해도 같은 결과가 나옵니다. */
+
+.button:hover{
+    background-color: #ccc;
+}
+
+.button:active{
+    background-color: #bbb
+}
